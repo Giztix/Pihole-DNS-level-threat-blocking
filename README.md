@@ -9,27 +9,28 @@ That’s where DNS resolution comes into play. It’s the process of translating
 What role do DNS Servers play? 
 DNS servers are like the internet phonebooks, they respond to these translation requests.
 
+
 ## How DNS Resolution Works?
 
 1. **Client Request:**
 Your device asks, “What is the IP for www.google.com?”
 
 
-2. **Local DNS Cache Check**
+2. **Local DNS Cache Check:**
 If it was recently looked up, the answer may be cached locally or on your router.
 
 
-3. **Query Forwarding**
+3. **Query Forwarding:**
 If not cached, the request is forwarded to a DNS resolver (e.g., Google DNS at 8.8.8.8, Cloudflare at 1.1.1.1, or a custom DNS like Unbound).
 
 
-4. **DNS Lookup Chain**
+4. **DNS Lookup Chain:**
 The resolver contacts a series of authoritative servers to find the correct IP.
 
-5. **Response Returned**
+5. **Response Returned:**
 The IP address is sent back to your device, and the website loads.
 
 
 Pi-hole will effectively perform these actions but it also holds a block list! This is where it has a list of domain names that it will respond with the IP address of 0.0.0.0 
 
-This is a dead-end IP address and will load nothing. Effectively it will dead end any blocked domains and properly execute DNS resolution for every other DNS query.
+This is a dead-end IP address and will load nothing. Effectively it will dead end any blocked domains whilst properly executing DNS resolution for every other DNS query.
