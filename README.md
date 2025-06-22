@@ -1,6 +1,8 @@
 # Pihole-DNS-level-threat-blocking
 Pi-hole is a lightweight network-level advertisement and tracker blocker. It is designed to run on minimal hardware such as a Raspberry Pi. Pi-hole acts as a local DNS server that intercepts and filters DNS requests before they reach external servers. 
 
+
+
 What is DNS (Domain Name System) Resolution? 
 When you type a web address like www.google.com into your browser, your device doesn’t understand domain names. It needs an IP address to connect to Google’s servers. 
 
